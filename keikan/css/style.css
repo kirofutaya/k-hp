@@ -1,0 +1,480 @@
+@charset "UTF-8";
+/* フォントサイズを約10pxに設定 */
+html{
+  font-size: 62.5%;
+}
+/* width等の値をpadding等を考慮した数値にするために設定 */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+/* 画像の下に隙間が入らないようにする */
+*img {
+  vertical-align: bottom;
+}
+body {
+  font-size: 1.4rem;
+  font-family:Judson, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif, 'Rokkitt', serif;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/********ヘッダー開始********/
+
+/* デフォルト */
+.page-header.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 30;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+          box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+}
+
+header .inner {
+  width: 100%;
+  padding: 1rem 3rem 0 2rem;
+  margin: 0;
+}
+
+.no-boxshadow.page-header {
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+/* 中身 */
+header .site-logo {
+    float: left;
+}
+
+header #nav_toggle {
+  float: right;
+  display: block;
+  -ms-transform: translate(0,3px);
+  -webkit-transform: translate(0,3px);
+  transform: translate(0,3px);
+}
+
+/* Primary nav */
+header nav {
+  float: right;
+  padding-right: 2rem;
+  letter-spacing: 1px;
+}
+
+header nav li {
+  float: left;
+  padding: 1rem;
+}
+
+header nav ul {
+  padding-top: 0.5rem;
+}
+
+.nav-item a {
+    font-family: serif;
+    color: rgb(100, 100, 100);
+}
+
+.nav-item a:hover{
+  color: black;
+}
+
+.nav-item a {display: inline-block;}
+.nav-item a::after {
+  content: '';
+  display: block;
+  width: 0;
+  margin: 5px auto 0;
+  border-bottom: 1px solid black;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
+}
+
+
+/******* ヘッダー終了 *******/
+
+
+
+
+
+
+
+
+
+
+.keikan_ken {
+  background: url(../images/room.jpg) no-repeat center top;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.keikan_ken::before{
+	/* 透過した黒を重ねる */
+	background-color: rgba(0,0,0,0.5);
+	/* どの範囲に重ねるかを指定 */
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+}
+
+.keikan_ken .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+
+.keikan_ken .title span {
+  font-size: 5rem;
+  color: rgb(255, 255, 255);
+}
+
+
+/* フッターここから */
+footer {
+  background-color: rgb(40, 40, 40);
+}
+.link-box{
+  padding: 2rem;
+}
+
+.out1, .out2 {
+  display: block;
+  float: left;}
+.out1 {width: 70%;}
+.out2 {width: 30%;}
+
+.link {
+  width: 100%;
+  font-size: 3rem;
+  font-family: serif;
+  letter-spacing: 2px;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  display: block;
+  border-bottom: : solid 1px rgb(255, 255, 255);
+}
+.univ {
+  float: left;
+  height: auto;
+  text-align: center;
+  padding: 1rem;
+}
+.daigaku{width: 60%;}
+.group{width: 40%;}
+
+.univ p a {
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem 3rem;
+  transition: all 0.5s;
+}
+.univ p a:hover{
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+.univ .vertical-line {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 5px 0;
+  color: white;
+}
+.univ * {
+  width:100%;
+  text-align: center;
+}
+
+
+.copyright {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 2rem;
+}
+.copyright p {
+  font-size: 1rem;
+  color: white;
+}
+
+/* フッターここまで */
+
+
+
+/* スクロールボタンここから */
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3rem;
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    padding: 25px 0;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
+/* スクロールボタンここまで */
+
+
+
+
+
+/**********
+レスポンシブデザイン
+**********/
+
+@media (max-width:1040px) {
+/* ヘッダー */
+  nav{
+		display: none;
+		position: absolute;
+		top:60px;
+		width: 100%;
+		background: rgb(255, 255, 255);
+		left: 0;
+	}
+	header nav ul{
+		display: block;
+		margin: 0 auto;
+		width: 90%;
+	}
+	header nav ul li{
+    width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		border-bottom: 1px solid #fff;
+	}
+	header nav ul li:last-child{
+		border: none;
+	}
+	header nav ul li a{
+		display: block;
+	}
+  /*開閉ボタン*/
+#nav_toggle {
+  display: block;
+  width: 3rem;
+  height: 3.5rem;
+  position: relative;
+  top: 1rem;
+  z-index: 100;
+}
+#nav_toggle div {
+  position: relative;
+}
+#nav_toggle span{
+  display: block;
+  height: 2px;
+  background: rgb(100, 100, 100);
+  position:absolute;
+  width: 100%;
+  left: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+#nav_toggle span:nth-child(1){
+  top:0px;
+}
+#nav_toggle span:nth-child(2){
+  top:8px;
+}
+#nav_toggle span:nth-child(3){
+  top:16px;
+}
+
+/*開閉ボタンopen時*/
+.open #nav_toggle span:nth-child(1) {
+    top: 12px;
+     -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+.open #nav_toggle span:nth-child(2) {
+    width: 0;
+    left: 50%;
+  }
+.open #nav_toggle span:nth-child(3) {
+    top: 12px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+}
+/* ヘッダーここまで */
+
+
+
+  .keikan_ken {height: 400px}
+  .keikan .title::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .keikan_ken .title span {
+    float: left;
+    width: 100%;
+  }
+
+  .keikan_ken .title .todai{
+    font-size: 3.5rem;
+    opacity: 0.6;
+    letter-spacing: 1rem;
+    -ms-transform: translate(22%,-5px);
+    -webkit-transform: translate(22%,-5px);
+    transform: translate(22%,-5px);
+  }
+  .keikan_ken .title .ken{
+    font-size: 4.5rem;
+    -ms-transform: translate(15%,0);
+    -webkit-transform: translate(15%,0);
+    transform: translate(15%,0);
+  }
+
+
+
+/* フッター */
+.out1, .out2{
+  float: none;
+  width: 100%;
+}
+.out2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+.out2 iframe {
+  display: inline-block;
+}
+/* フッター */
+
+}
+
+
+@media (max-width:768px) {
+
+  nav{
+    top: 55px;
+  }
+
+  .site-logo img {height: 4.5rem}
+
+
+  .keikan_ken {height: 300px}
+  .keikan .title::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .keikan_ken .title span {
+    float: left;
+    width: 100%;
+  }
+
+  .keikan_ken .title .todai{
+    font-size: 3rem;
+    opacity: 0.6;
+    letter-spacing: 1rem;
+    -ms-transform: translate(22%,-5px);
+    -webkit-transform: translate(22%,-5px);
+    transform: translate(22%,-5px);
+  }
+  .keikan_ken .title .ken{
+    font-size: 4rem;
+    -ms-transform: translate(15%,0);
+    -webkit-transform: translate(15%,0);
+    transform: translate(15%,0);
+  }
+
+
+}
+
+
+@media (max-width:550px) {
+
+  nav{
+    top: 50px;
+  }
+  header #nav_toggle {
+    -ms-transform: translate(0,-2px);
+    -webkit-transform: translate(0,-2px);
+    transform: translate(0,-2px)
+  }
+
+.site-logo img {height: 4rem}
+
+.keikan_ken {height: 200px}
+.keikan .title::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.keikan_ken .title span {
+  float: left;
+  width: 100%;
+}
+
+.keikan_ken .title .todai{
+  font-size: 2rem;
+  opacity: 0.6;
+  letter-spacing: 1rem;
+  -ms-transform: translate(22%,9px);
+  -webkit-transform: translate(22%,9px);
+  transform: translate(22%,9px);
+}
+.keikan_ken .title .ken{
+  font-size: 3rem;
+  -ms-transform: translate(15%,12px);
+  -webkit-transform: translate(15%,12px);
+  transform: translate(15%,12px);
+}
+
+/* フッターここから */
+.link-box {padding: 1rem;}
+.univ {padding: 0;}
+.univ p a {
+  font-size: 1rem;
+  padding: 5px 5px;}
+/* フッターここまで */
+
+
+#page-top {
+  bottom: 50px;
+  font-size: 3rem;
+}
+#page-top a {
+  width: 60px;
+  height: 60px;
+}
+#page-top i {
+-ms-transform: translate(0,-10px);
+-webkit-transform: translate(0,-10px);
+transform: translate(0,-10px)
+}
+
+}
