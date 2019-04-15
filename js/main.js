@@ -29,7 +29,7 @@ $(function () {
 //    })
 
 
-// スクロールボタンn
+// スクロールボタン
 var topBtn = $('#page-top');
 topBtn.hide();
 //スクロールが100に達したらボタン表示
