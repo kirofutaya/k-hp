@@ -1,115 +1,223 @@
-<!-- テスト -->
-<!-- マスター -->
-
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>東京大学景観研究室</title>
-    <link rel="stylesheet" href="css/reset.css">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon-180x180.png">　
+  <title>KIRO FUTAYA</title>
+  <!-- フォント追加 -->
+    <link href="https://fonts.googleapis.com/css?family=Judson:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+
+
+  <!-- アイコンフォント -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <!-- ノーマライズ -->
+    <link rel="stylesheet" href="css/normalize.css">
+  <!-- スタイルシート指定 -->
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <script src="./js/vendor/jquery-3.3.1.min.js"></script>
+  <!-- jQueryファイルの指定 -->
+    <script src="./js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
     <script src="./js/main.js"></script>
 </head>
 
+<!-- ここからbody -->
 <body>
 
-<!-- ヘッダー開始 -->
+<!-- ローディング -->
+<div id="is-loading">
+ <div id="loading">
+  <p>LOADING</p>
+  <img src="./images/815.svg">
+ </div>
+</div>
 
-<header class="page-header sticky" role="banner">
-  <div class="inner clearfix">
+<!-- ヘッダー -->
+  <header class="header">
+    <p class="site-title-sub">Portfolio Site</p>
+    <h1 class="site-title">KIRO FUTAYA</h1>
+      <p class="site-description">
+        “I’d just be the catcher in the rye and all.<br>
+        I know it’s crazy, but that’s the only thing I’d really like to be”<br>
+        —J.D.Salinger
+      </p>
+    <div class="buttons">
+      <a class="button button-ghost to-profile" href="#profile">PROFILE</a>
+      <a class="button button-ghost to-contact" href="#contact">CONTACT</a>
+    </div>
+    <div class="pleaseScroll">Scroll</div>
+  </header>
 
-    <h1 class="site-logo">
-      <a href="./"><img src="./images/keikan_logo_black.png" height="50" alt="景観研究室"></a>
-    </h1>
+<!-- プロフィールセクション -->
+<div class="scroll-wrap">
+  <section class="profile slideContsR slideConts" id="profile">
 
-    <div id="nav_toggle">
-        <div>
-          <span></span>
-          <span></span>
-          <span></span>
+      <h2 class="heading fadeinRight">PROFILE</h2>
+
+      <p class="profile-text">
+        Kiro Futaya<br>
+        1995年10月24日生まれ<br>
+        東京大学工学部卒<br>
+        東京大学大学院工学系研究科<br>
+        社会基盤学専攻修士過程
+
+      </p>
+      <p class="profile-text">
+        はじめまして。<br>
+        趣味でコードを書いています。<br>
+        趣味の多い生涯を送ってきました。<br>
+        例えば、手品フリークです。<br>
+        例えば、1年間世界中を飛び回っていました。<br>
+        例えば、詩を書いています。<br>
+        例えば、密かに小説家を目指しています。<br>
+        <br>
+        僕の好きが詰まったものが、<br>
+        誰かの心に届いたと感じる瞬間が幸せです。<br>
+      </p>
+
+  </section>
+</div>
+<!-- ワークスセクション -->
+<div class="scroll-wrap">
+  <section class="works slideContsL slideConts">
+
+    <h2 class="heading fadeinLeft">BACKPACKER</h2>
+    <p class="workText">
+      大学を休学して世界中を旅した記録
+    </p>
+    <div class="works-wrapper">
+      <div class="work-box india">
+        <img class="work-image" src="images/india3.jpg" alt="旅1">
+        <div class="work-description">
+          <div class="work-description-inner">
+        <p class="work-text">
+          【 バックパッカーデビュー 】<br>
+          大学4年生にして初めての一人旅<br>
+          <a href="https://spinningtop.hatenablog.com/entry/essay/india/delhi/1" class="button button-ghost" target="_blank">READ MORE</a>
+        </p>
+          </div>
+      </div>
+      </div>
+      <div class="work-box europe">
+        <img class="work-image" src="images/prague.jpg" alt="旅2">
+        <div class="work-description">
+          <div class="work-description-inner">
+        <p class="work-text">
+          【 ヨーロッパ縦断フィンランドtoギリシャ 】<br>
+          休学最初の旅<br>
+          <a href="https://spinningtop.hatenablog.com/entry/2018/05/06/004510" class="button button-ghost" target="_blank">READ MORE</a>
+        </p>
+          </div>
         </div>
+      </div>
+      <div class="work-box asia">
+        <img class="work-image" src="images/baiyon.jpg" alt="旅3">
+        <div class="work-description">
+          <div class="work-description-inner">
+        <p class="work-text">
+          【 東南アジア周遊 】<br>
+          約2ヶ月の滞在<br>
+          <a href="https://spinningtop.hatenablog.com/entry/2018/09/30/211605" class="button button-ghost" target="_blank">READ MORE</a>
+        </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="work-box southAmerica">
+        <img class="work-image" src="images/uyuni_star.JPG" alt="旅4">
+        <div class="work-description">
+          <div class="work-description-inner">
+        <p class="work-text">
+          【 中南米放浪 】<br>
+          最後の旅<br>
+          <a href="https://spinningtop.hatenablog.com/entry/mexico" class="button button-ghost" target="_blank">READ MORE</a>
+        </p>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </section>
+</div>
+<!-- スキルセクション -->
+<div class="scroll-wrap">
+  <section class="skills slideContsR slideConts">
 
-    <nav role="navigation">
-    	<ul class="clearfix">
-    		<li class="nav-item"><a href="./concept.html">CONCEPT</a></li>
-    		<li class="nav-item"><a href="./member.html">MEMBER</a></li>
-        <li class="nav-item"><a href="#">RESEARCH</a></li>
-    		<li class="nav-item"><a href="#">PROJECT</a></li>
-    		<li class="nav-item"><a href="#">EVENT</a></li>
-        <li class="nav-item"><a href="#">CONTACT</a></li>
-        <li class="nav-item"><a href="https://www.facebook.com/keikan.ut" target="_blank">SNS <i class="fab fa-facebook"></i></a></li>
-    	</ul>
-    </nav>
-
-
-  </div>
-</header>
-
-<!-- ヘッダー終了 -->
-
-  <div class="keikan_ken">
-    <div class="title">
-      <span class="todai">東京大学</span><span class="ken">景観研究室</span>
+    <h2 class="heading fadeinRight">SKILLS</h2>
+    <div class="skills-wrapper">
+      <div class="skill-box">
+        <i class="skill-icon fas fa-graduation-cap"></i>
+      <div class="skill-title">CIVIL ENGINEERING</div>
+        <p class="skill-text">
+          学部・院ともに専攻は土木工学<br>
+          学部卒業論文は<br>
+          「富山旧城下町における水系基盤が都市空間変容に与えた影響」
+        </p>
+      </div>
+      <div class="skill-box">
+        <i class="skill-icon fas fa-magic"></i>
+      <div class="skill-title">MAGIC</div>
+        <p class="skill-text">
+          中学１年生より手品を始める<br>
+          テーマ性のあるカードマジックが得意
+        </p>
+      </div>
+      <div class="skill-box">
+      <i class="skill-icon fas fa-camera"></i>
+      <div class="skill-title">CAMERA</div>
+        <p class="skill-text">
+          NikonD5300<br>
+        </p>
+      </div>
+      <div class="skill-box">
+      <i class="skill-icon fas fa-laptop"></i>
+      <div class="skill-title">CODING</div>
+        <p class="skill-text">
+          HTML/CSS/jQuery/Swift
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
+</div>
+<!-- フォーム -->
 
-  <div class="content clearfix">
-    <br>
-    <br><br><br>コンテンツ<br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br>
-    <br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br>
-  </div>
+  <section class="contact" id="contact">
+    <h2 class="heading">CONTACT</h2>
+    <form method="post" action="mailto:magic2valleys@icloud.com" class="contact-form">
+      <!-- <input type="text" name="name" placeholder="E-MAIL"> -->
+      <!-- <textarea name="message" placeholder="MESSAGE"></textarea> -->
+      <input type="submit" value="SEND EMAIL">
+    </form>
+    <div class="hidden_sentence">SNSのDMまでお願い致します</div>
+    <div class="sns-wrapper">
+      <div class="sns-box twitter">
+        <a href="https://twitter.com/spinningtop24" target="_blank">
+        <i class="sns-icon fab fa-twitter"></i></a>
+      </div>
+      <div class="sns-box instagram">
+        <a href="https://www.instagram.com/double_valleys/" target="_blank">
+        <i class="sns-icon fab fa-instagram"></i></a>
+      </div>
+      <div class="sns-box facebook">
+        <a href="https://www.facebook.com/profile.php?id=100008212892012" target="_blank">
+        <i class="sns-icon fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </section>
 
 <!-- スクロールボタン -->
-  <p id="page-top"><a href="#wrap"><i class="fas fa-caret-up"></i></a></p>
+<a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
 
 
-<!-- フッター開始 -->
-<footer>
-  <div class="link-box clearfix">
-    <div class="out1">
-      <div class="clearfix">
-        <p class="link">LINK</p>
-        <div class="univ daigaku">
-          <p><a href="http://www.u-tokyo.ac.jp/">東京大学</a></p>
-          <span class="vertical-line">|</span>
-          <p><a href="http://www.t.u-tokyo.ac.jp/">工学部/大学院工学系研究科</a></p>
-          <span class="vertical-line">|</span>
-          <p><a href="http://www.civil.t.u-tokyo.ac.jp/">社会基盤学科/社会基盤学専攻</a></p>
-        </div>
-        <div class="univ group">
-          <p><a href="http://www.groundscape.jp/">GSデザイン会議</a></p>
-          <span class="vertical-line">|</span>
-          <p><a href="http://www.groundscape.jp/youth/index.html">GSDy</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="out2 facebook">
-      <div class="test">
-      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkeikan.ut&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="340" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-      </div>
-    </div>
-  </div>
-  <div class="copyright"><p>2019©️Landscape and Civic Design Lab.: The University of Tokyo All right reserved.</p></div>
-</footer>
-
-<!-- フッターここまで -->
-
-
-
+<!-- フッター -->
+  <footer class="footer">
+    © KIRO FUTAYA 2019
+  </footer>
+  <script src="lib/placeholders.min.js"></script>
 
 </body>
-
 
 </html>
