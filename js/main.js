@@ -2,16 +2,20 @@
 
 
 $(function () {
+
 // ナビゲーションバー
-
-
     $(window).scroll(function(){
-      var h = $('.keikan_ken').height();
-      if ($(window).scrollTop() > h) {
-        $('.page-header').addClass('visible');
+      if ($('.keikan_ken').length){
+        var h = $('.keikan_ken').height();
+        if ($(window).scrollTop() > h) {
+          $('.page-header').addClass('visible');
+        } else {
+          $('.page-header').removeClass('visible');
+        }
       } else {
-        $('.page-header').removeClass('visible');
+        $('.page-header').addClass('visible');
       }
+
     });
 
 // ハンバーガーメニュー

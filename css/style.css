@@ -32,6 +32,7 @@ ul{
 }
 a {
   text-decoration: none;
+  color: #000000;
 }
 
 /********ヘッダー開始********/
@@ -192,6 +193,7 @@ header nav li {
 .content-wrap{
   padding-top: 5rem;
   padding-bottom: 5rem;
+  background-color: rgb(245,245,245);
 }
 
 
@@ -306,150 +308,151 @@ header nav li {
 
 
 /*********** コンセプトページ */
-.concept-outer {
-  background: url(../images/wood.jpg) no-repeat center top;
-  background-attachment: fixed;
-  background-size: cover;
-  padding: 6rem 0 0 0;
+.section-concept{
+  padding: 10rem 2rem 2rem;
+  background-color: rgb(245,245,245);
 }
-.concept-inner{
-  padding: 4rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding-bottom: 8rem;
+.concept-wrap{
+  margin: auto;
+  max-width: 1040px;
 }
-.concept-inner p,.concept-inner h1 {
-  color: white;
-  font-size: 1.5rem;
-  font-family: 'Sawarabi Mincho';
-  letter-spacing: 1.5px;
-  line-height: 2rem;
-  padding-bottom: 2rem;
+.concept-wrap h2{
+  font-size: 3.2rem;
+  padding: 1rem;
+  width: 100%;
+  border-bottom: 1px solid rgb(40,40,40);
+  margin-bottom: 2rem;
 }
-.concept-inner h1 {
-  font-size: 3rem;
-  font-family: serif;
-  font-weight: normal;
-  padding: 3rem 6rem;
-  position: relative;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto
+.concept-wrap p {
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
 }
-
-.concept-inner h1:before, .concept-inner h1:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  display: inline-block;
-  width: 45px;
-  height: 1px;
-  background-color: white;
-}
-.concept-inner h1:before {left:0;}
-.concept-inner h1:after {right: 0;}
-
-.concept-inner .signature {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  padding-right: 2rem;
+.signature{
   text-align: right;
-  }
-
+}
 
 /* メンバーページ */
-.flex{
+.section-members{
+  padding: 10rem 2rem 2rem;
+  background-color: rgb(245,245,245);
+}
+.members-wrap{
+  margin: auto;
+  max-width: 1040px;
+}
+.members-wrap h1{
+  font-size: 3.2rem;
+  padding: 1rem;
+  width: 100%;
+  border-bottom: 1px solid rgb(40,40,40);
+  margin-bottom: 2rem;
+}
+.members-wrap h2{
+  font-size: 3.2rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.flex-staff, .flex-student{
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
-.flex-teacher{
-  width: 25%;
-}
-
-.member-inner h1 {
-  font-size: 3rem;
-  padding: 3rem 6rem;
-  position: relative;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.member-inner h1:before, .member-inner h1:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  display: inline-block;
-  width: 45px;
-  height: 1px;
-  background-color: black;
-}
-.member-inner h1:before {left:0;}
-.member-inner h1:after {right: 0;}
-
-
-.member-inner h1,.member-inner h2,.member-inner h3{
-  padding-bottom: 2rem;
-  font-family: serif;
-  font-weight: normal;
-}
-
-.member-inner h2 {
-  font-size: 2.5rem;
-  padding-bottom: 1rem;
-}
-
-
-.member-inner h3 {
-  font-size: 2.5rem;
-}
-.member-inner p {
-  font-size: 2rem
-}
-.member-inner .button{
-  font-size: 2rem;
-  font-family: serif;
-}
-
-
-
-.staff {
+.flex-staff > * {
+  width: 32%;
   padding: 2rem;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+  border-left: 6px solid rgba(40,40,40);
 }
-.student {
-  float: left;
+/* hoverで上からマスク */
+  .hover-mask {
+  	overflow:		hidden;
+  	position:		relative;	/* 相対位置指定 */
+  }
+  .hover-mask .caption {
+  	font-size: 2.4rem;
+  	text-align: center;
+  	padding-top: 3.5rem;
+  	color: #f5f5f5;
+  }
+  .hover-mask .mask {
+  	width:100%;
+  	height:100%;
+  	position: absolute;	/* 絶対位置指定 */
+  	top:0;
+  	left:0;
+  	opacity:0;	/* マスクを表示しない */
+  	background-color:	rgba(40,40,40,0.6);
+  	-webkit-transition:	all 0.2s ease;
+  	transition:		all 0.3s ease;
+  }
+  .hover-mask:hover .mask {
+  	opacity:1;	/* マスクを表示する */
+  }
+
+.flex-staff h3{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.staff p {
+  font-size: 2.4rem;
+}
+.student{
   width: 25%;
-  padding: 2rem
+  padding: 0 1rem;
 }
-.member-inner a {
-  color: black;
+.student h3{
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
-.drop-shadow:hover, .drop-shadow > *:hover{
-  box-shadow: 0 0px 20px rgba(0,0,0,0.2);
-  transition: 0.4s;
-}
-.student li {
+.student li{
   font-size: 1.8rem;
-  line-height: 2.3rem;
-  list-style: none;
+  margin-bottom: 0.5rem;
 }
 
-/* ボタン */
-.button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  color: rgb(70, 70, 70);
-  border: solid 2px rgb(70, 70, 70);
-  transition: .4s;
-}
 
-.button:hover {
-  background: rgb(70, 70, 70);
-  color: white;
-  cursor: pointer;
+/* formerstaff開閉ボタン */
+  .hidden_box{
+    margin-top: 4rem;
+  }
+  .check {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    color: rgb(40, 40, 40);
+    border: solid 2px rgb(40, 40, 40);
+    transition: .4s;
+  }
+  .check:hover {
+    background: rgb(40, 40, 40);
+    color: #f5f5f5;
+    cursor: pointer;
+  }
+  /*チェックは隠す*/
+  .hidden_box input { display: none;}
+  /*中身を非表示にしておく*/
+  .hidden_box .hidden_show {
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: 0.8s;
+  }
+  /*クリックで中身表示*/
+  .check1:checked + .hidden_show {
+      height: auto;
+      padding: 2rem 0;
+      opacity: 1;
+  }
+  .formerstaffs li{
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .formerstaffs a:hover {
+    background-color: rgba(40,40,40,0.8)
+  }
 
-}
 /* フッターここから */
 footer {
   background-color: rgb(40, 40, 40);
@@ -750,14 +753,25 @@ height: 100%;
   -webkit-transform: translate(15%,12px);
   transform: translate(15%,12px);
 }
-
-
 .flex-news{
   justify-content: center;
   flex-direction: column;
 }
 .item1{
   margin-bottom: 1rem;
+}
+
+
+.concept-wrap h2{
+  font-size: 2.4rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.concept-wrap p {
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  line-height: 2rem;
+  margin-bottom: 1.4rem;
 }
 
 .staff {

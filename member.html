@@ -27,7 +27,7 @@
 <body>
 <!-- ヘッダー開始 -->
 
-<header class="page-header sticky" role="banner">
+<header class="page-header sticky visible" role="banner">
   <div class="inner clearfix">
 
     <h1 class="site-logo">
@@ -59,134 +59,94 @@
 </header>
 
 <!-- ヘッダー終了 -->
+<section class="section-members">
+  <div class="members-wrap">
+    <h1>Member</h1>
+      <h2>Staff</h2>
+        <div class="flex-staff">
+          <a class="hover-mask" href="#">
+            <div class="staff">
+              <h3>教授</h3>
+              <p>中井祐</p>
+            </div>
+            <div class="mask">
+		            <div class="caption">略歴・業績</div>
+	          </div>
+          </a>
+          <a class="hover-mask" href="#">
+            <div class="staff">
+              <h3>助教</h3>
+              <p>福島秀哉</p>
+            </div>
+            <div class="mask">
+		            <div class="caption">略歴・業績</div>
+	          </div>
+          </a>
+          <div class="staff">
+            <h3>秘書</h3>
+            <p>津久井文</p>
+          </div>
+        </div>
 
 
-<!-- タイトル部分 -->
-  <div class="keikan_ken">
-    <div class="title">
-      <span class="todai">東京大学景観研究室</span>
-    </div>
+        <br><br><br>
+
+      <h2>Student</h2>
+        <div class="flex-student">
+            <div class="student">
+              <h3>Docter</h3>
+                <ul>
+                  <li>荻原知子</li>
+                  <li>裴宇翔(Pei Yuxiang)</li>
+                  <li>朱棟文(Zhu Dongwen)</li>
+                  <li>Bosco, So Ho Lung</li>
+                </ul>
+            </div>
+            <div class="student">
+              <h3>M2</h3>
+                <ul>
+                  <li>安藤理沙</li>
+                  <li>平田いずみ</li>
+                </ul>
+            </div>
+            <div class="student">
+              <h3>M1</h3>
+                <ul>
+                  <li>五三裕太</li>
+                  <li>岡村壮真</li>
+                  <li>児玉創</li>
+                  <li>二谷輝郎</li>
+                </ul>
+            </div>
+            <div class="student">
+              <h3>B4</h3>
+                <ul>
+                  <li>網倉朔太郎</li>
+                  <li>大澤佑貴</li>
+                  <li>上林就</li>
+                  <li>谷川晃介</li>
+                </ul>
+            </div>
+        </div>
+          <br>
+          <div class="hidden_box">
+            <label class="check" for="check1">FORMER STAFF</label>
+            <input type="checkbox" id="check1" class="check1">
+            <div class="hidden_show">
+              <!--非表示ここから-->
+              <ul class="formerstaffs">
+                <li><a href="#">
+                  <p>篠原修</p><p>東京大学名誉教授</p><p>景観研究室教授(-2005.3)→政策研究大学院大学教授(-2011.3)→GSデザイン会議</p></a>
+                </li>
+                <li><a href="#">内藤廣<p>東京大学名誉教授</p><p>景観研究室教授（-2011.3)→内藤廣建築設計事務所</p></a></li>
+                <li><a href="#">斎藤潮<p>現　東京工業大学大学院社会理工学研究科社会工学専攻　教授</p><p>景観研究室助教授（-1996.3)→東京工業大学斎藤潮研究室</p></a></li>
+              </ul>
+              <!--ここまで-->
+            </div>
+          </div>
+
   </div>
-<!-- タイトル部分ここまで -->
-
-<div class="content-wrap">
-
-
-<!-- スライドショー -->
-<section class="section-slider">
-  <!-- Slider main container -->
-  <div class="swiper-container">
-      <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide"><img src="images/slideshow_dir/0slide-1.jpeg"></div>
-          <div class="swiper-slide"><img src="images/slideshow_dir/0slide-2.jpeg"></div>
-          <div class="swiper-slide"><img src="images/slideshow_dir/0slide-3.jpeg"></div>
-          <!-- <div class="swiper-slide"><img src="images/slideshow_dir/slide-4.jpeg"></div> -->
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-  </div>
-  <script>
-      var mySwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
-      loop: true,
-      speed: 500,
-      autoHeight: true,
-      slidesPerView: 2,
-      spaceBetween: 10,
-      centeredSlides : true,
-      autoplay: {delay: 3000},
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-      breakpoints: {
-        767: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-        }
-      },
-    })
-  </script>
 </section>
-<!-- スライドショーここまで -->
-
-<!-- 最新ニュース -->
-    <section class="section-news">
-      <div class="flex-center">
-        <ul class="newsList">
-          <!-- 一個前の<li></li>までをコピペして、中身を変えてください。 -->
-          <li>
-            <a href="http://book.gakugei-pub.co.jp/mokuroku/book/ISBN978-4-7615-3245-1.htm" target="_blank">
-                <div class="flex-news">
-                  <div class="item1">
-                    <time datetime="2019-9-2">2019.06.10</time>
-                  </div>
-                  <div class="item2">
-                    福島秀哉助教と山口敬太、西村亮彦編による『まちを再生する公共デザインーインフラ・景観・地域戦略をつなぐ思考と実践』が学芸出版社より出版されました。
-                  </div>
-                </div>
-            </a>
-          </li>
-          <li>
-            <a href="http://book.gakugei-pub.co.jp/mokuroku/book/ISBN978-4-7615-3245-1.htm" target="_blank">
-                <div class="flex-news">
-                  <div class="item1">
-                    <time datetime="2019-9-2">2019.06.04</time>
-                  </div>
-                  <div class="item2">
-                    景観研究室が取り組む山中湖のプロジェクトにおいて整備された山中湖村平野「ゆいの広場ひらり」が「都市景観大賞「都市景観の日」実行委員会会長賞（特別賞）」に選定されました。
-                  </div>
-                </div>
-            </a>
-          </li>
-          <li>
-            <a href="http://www.cbr.mlit.go.jp/kisya/2019/05/0523.pdf" target="_blank">
-                <div class="flex-news">
-                  <div class="item1">
-                    <time datetime="2019-9-2">2019.05.30</time>
-                  </div>
-                  <div class="item2">
-                    福島秀哉助教の博士論文が「公益財団法人前田記念工学振興財団　山田一宇賞」を受賞しました。
-                  </div>
-                </div>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.jila-zouen.org/annualmeeting/7867" target="_blank">
-                <div class="flex-news">
-                  <div class="item1">
-                    <time datetime="2019-9-2">2019.05.25</time>
-                  </div>
-                  <div class="item2">
-                    景観研究室修士2年安藤、学部4年上林、網倉、大澤、地域/情報研究室修士2年の松野が提案した『はだしの未来都市』が、「日本造園学界2019年全国大会学生公開デザインコンペ」において最優秀賞を受賞しました。
-                  </div>
-                </div>
-            </a>
-          </li>
-
-
-        </ul>
-      </div>
-    </section>
-
-<!-- ここまでニュース -->
-
-
-</div>
 
 <!-- スクロールボタン なんかうまく表示されないから後回し-->
 <!-- <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a> -->
