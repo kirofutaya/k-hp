@@ -14,15 +14,25 @@ html{
 }
 body {
   font-size: 1.4rem;
-  font-family:Judson, "Hiragino Kaku Gothic ProN", Meiryo, 'Sawarabi Mincho', sans-serif;
+  font-family:'Judson',"Hiragino Kaku Gothic ProN", Meiryo, 'Sawarabi Mincho', sans-serif;
+}
+section{
+  padding: 2rem 2rem;
 }
 .clearfix::after {
   content: "";
   display: block;
   clear: both;
 }
-
-
+.br-sp{
+  display: none;
+}
+ul{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 
 /********ヘッダー開始********/
 
@@ -32,9 +42,15 @@ body {
   top: 0;
   z-index: 30;
   width: 100%;
+  background-color: rgba(40,40,40,0);
+  /* -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.25);
+          box-shadow: 0 1px 1px rgba(0,0,0,0.25); */
+  transition: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.page-header.visible{
   background-color: rgba(40,40,40,0.8);
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.25);
-          box-shadow: 0 1px 1px rgba(0,0,0,0.25);
 }
 
 header .inner {
@@ -50,7 +66,7 @@ header .inner {
 /* 中身 */
 header .site-logo {
     float: left;
-    padding: 0
+    padding-top: 1rem;
 }
 
 header #nav_toggle {
@@ -68,7 +84,7 @@ header #nav_toggle span{
 /* Primary nav */
 header nav {
   float: right;
-  padding-right: 2rem;
+  padding: 1rem 0;
   letter-spacing: 1px;
 }
 
@@ -77,13 +93,9 @@ header nav li {
   padding: 1rem;
 }
 
-header nav ul {
-  padding-top: 0.5rem;
-}
-
 .nav-item a {
-    font-family: serif;
-    color: #f5f5f5;
+  font-size: 2rem;
+    color: #dddddd;
 }
 
 .nav-item a:hover{
@@ -104,25 +116,92 @@ header nav ul {
   width: 100%;
 }
 
+
+
 /******* ヘッダー終了 *******/
 
-
-.content-outer {
-  max-width: 1040px;
-  padding: 6rem 2rem 0 2rem;
-  margin-right: auto;
-  margin-left: auto;
+/******* スクロールボタン *****/
+.back-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    color: #fff;
+    width: 5rem;
+    height: 5rem;
+    z-index: 2;
+    display: none;
 }
-.content-inner {
-  padding-bottom: 3rem;
+.back-to-top:before {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    border-radius: 2.5rem;
+    border: 0.2rem 0.2rem 0.2rem 0.2rem;
+    border-color: #fff;
+    left: 0;
+    top: 0;
+    background: #696969;
 }
-.center-wrap {text-align: center;}
+.back-to-top div {
+    display: block;
+    text-align: center;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* .back-to-top i {
+    display: block;
+    text-align: center;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+} */
+/* #page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3rem;
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    padding: 25px 0;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+} */
 
-/* トップページ */
+/******** スクロールボタンここまで ********/
+
+
+.content-wrap{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+
+/*******トップページ ********/
 .keikan_ken {
-  background: url(../images/room.jpg) no-repeat center top;
+  background: url(../images/eitaibashi.jpg) no-repeat center top;
+  background-attachment: fixed;
   background-size: cover;
   position: relative;
+  text-align: center;
   width: 100%;
   height: 500px;
 }
@@ -136,13 +215,16 @@ header nav ul {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	content: ' ';
+	content: '';
 }
 
 .keikan_ken .title {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
+  font-family: 'Sawarabi Mincho';
+  letter-spacing: 0.2rem;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
@@ -154,7 +236,76 @@ header nav ul {
   color: rgb(255, 255, 255);
 }
 
-/* コンセプトページ */
+/* スライダー */
+.section-slider{
+  padding: 2rem;
+}
+.swiper-container {
+    width: 100%;
+    height: auto;
+    max-width: 1040px;
+
+}
+.swiper-slide img{
+  width: 100%;
+  height: auto;
+}
+/* ニュース */
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.flex-news{
+  display: flex;
+}
+.item1,.item2{
+  display: inline-block;
+}
+.item2{
+  font-size: 1.4rem;
+}
+
+.newsList {
+  border-top: 1px solid rgb(40,40,40);
+  width:100%;
+  max-width: 1040px;
+
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+.newsList li {
+  border-bottom: 1px solid rgb(40,40,40);
+}
+.newsList li a {
+  box-sizing: border-box;
+  color: #000000;
+  display: table;
+  padding: 10px;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  width: 100%
+}
+.newsList li a:hover {
+  background: rgba(40,40,40,0.1);
+  text-decoration: none;
+}
+  /* 時間の設定 */
+.newsList li time {
+  display: inline-block;
+  font-size: 1.4rem;
+  width: auto;
+  margin-right: 2rem;
+}
+/* END Kiro追加分 */
+
+
+/*********** コンセプトページ */
 .concept-outer {
   background: url(../images/wood.jpg) no-repeat center top;
   background-attachment: fixed;
@@ -206,6 +357,15 @@ header nav ul {
 
 
 /* メンバーページ */
+.flex{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.flex-teacher{
+  width: 25%;
+}
+
 .member-inner h1 {
   font-size: 3rem;
   padding: 3rem 6rem;
@@ -254,8 +414,6 @@ header nav ul {
 
 
 .staff {
-  float: left;
-  width: 33.33%;
   padding: 2rem;
 }
 .student {
@@ -295,131 +453,78 @@ header nav ul {
 /* フッターここから */
 footer {
   background-color: rgb(40, 40, 40);
-}
-.link-box{
+  width: 100%;
   padding: 2rem;
 }
-
-.out1, .out2 {
-  display: block;
-  float: left;}
-.out1 {width: 70%;}
-.out2 {width: 30%;}
-
-.link {
-  width: 100%;
-  font-size: 3rem;
-  font-family: serif;
-  letter-spacing: 2px;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  display: block;
-  border-bottom: : solid 1px rgb(255, 255, 255);
+.flex-footer{
+  display: flex;
+  margin: auto;
+  max-width: 1040px;
+  justify-content: space-between;
 }
-.univ {
-  float: left;
+.footer-box{
+  width: 24%;
   height: auto;
-  text-align: center;
-  padding: 1rem;
 }
-.daigaku{width: 60%;}
-.group{width: 40%;}
-
-.univ p a {
-  font-size: 1.5rem;
-  color: white;
-  padding: 0.5rem 3rem;
-  transition: all 0.5s;
-}
-.univ p a:hover{
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-}
-.univ .vertical-line {
-  display: inline-block;
-  font-size: 1.5rem;
-  padding: 5px 0;
-  color: white;
-}
-.univ * {
-  width:100%;
-  text-align: center;
-}
-
-
-.copyright {
+.footer-box h3{
+  font-size: 2.4rem;
   width: 100%;
-  height: auto;
-  text-align: center;
-  padding: 2rem;
+  color: #dddddd;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dddddd;
 }
-.copyright p {
-  font-size: 1rem;
-  color: white;
+.footer-content{
+  padding: 1rem 0.5rem;
 }
 
+.footer-box h4{
+  font-size: 2.4rem;
+  color: #dddddd;
+  padding-bottom:1rem;
+}
+.footer-box p{
+  font-size: 1.4rem;
+  padding-bottom: 0.5rem;
+  color: #dddddd;
+}
+.footer-box li{
+  margin: 1rem 0;
+}
+.footer-box a{
+  font-size: 1.4rem;
+  color: #aaaaaa;
+}
+.footer-box a:hover{
+  transition: 0.2s;
+  color: #dddddd;
+}
+.ggmap {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+}
+
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+
+.copyright{
+  padding-top: 2rem;
+  color: #aaaaaa;
+}
 /* フッターここまで */
 
 
-
-/* スクロールボタン */
-.back-to-top {
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    color: #fff;
-    width: 5rem;
-    height: 5rem;
-    z-index: 2;
-    display: none;
-}
-.back-to-top:before {
-    content: "";
-    display: block;
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    border-radius: 2.5rem;
-    border: 0.2rem 0.2rem 0.2rem 0.2rem;
-    border-color: #fff;
-    left: 0;
-    top: 0;
-    background: #696969;
-}
-.back-to-top i {
-    display: block;
-    text-align: center;
-    width: 5rem;
-    height: 5rem;
-    line-height: 5rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-/* #page-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 3rem;
-}
-#page-top a {
-    background: #666;
-    text-decoration: none;
-    color: #fff;
-    width: 80px;
-    height: 80px;
-    padding: 25px 0;
-    text-align: center;
-    display: block;
-    border-radius: 50%;
-}
-#page-top a:hover {
-    text-decoration: none;
-    background: #999;
-} */
-
-/* スクロールボタンここまで */
 
 
 
@@ -448,7 +553,7 @@ footer {
     width: 100%;
 		margin: 0 auto;
 		text-align: center;
-		border-bottom: 1px solid #fff;
+		/* border-bottom: 1px solid #fff; */
 	}
 	header nav ul li:last-child{
 		border: none;
@@ -509,7 +614,7 @@ footer {
 /* ヘッダーここまで */
 
   .keikan_ken {height: 400px}
-  .keikan .title::after {
+  /* .keikan .title::after {
     content: "";
     display: block;
     clear: both;
@@ -517,11 +622,10 @@ footer {
   .keikan_ken .title span {
     float: left;
     width: 100%;
-  }
+  } */
 
   .keikan_ken .title .todai{
     font-size: 3.5rem;
-    opacity: 0.6;
     letter-spacing: 1rem;
     -ms-transform: translate(22%,-5px);
     -webkit-transform: translate(22%,-5px);
@@ -555,7 +659,16 @@ footer {
 
 
 @media (max-width:768px) {
-
+  .content-wrap{padding: 0}
+  .flex-footer{
+    flex-wrap: wrap;
+  }
+  .footer-box{
+    width: 49%;
+  }
+  .footer-box{
+    margin-bottom: 2rem;
+  }
   /* nav{
     top: 55px;
   }
@@ -563,21 +676,13 @@ footer {
   .site-logo img {height: 4.5rem} */
 
 
-  .keikan_ken {height: 300px}
-  .keikan .title::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  .keikan_ken .title span {
-    float: left;
-    width: 100%;
+  .keikan_ken {
+    height: 300px;
+    background-attachment: scroll;
   }
 
   .keikan_ken .title .todai{
     font-size: 3rem;
-    opacity: 0.6;
-    letter-spacing: 1rem;
     -ms-transform: translate(22%,-5px);
     -webkit-transform: translate(22%,-5px);
     transform: translate(22%,-5px);
@@ -587,6 +692,14 @@ footer {
     -ms-transform: translate(15%,0);
     -webkit-transform: translate(15%,0);
     transform: translate(15%,0);
+  }
+
+
+  .flex{
+    flex-direction: column;
+  }
+  .flex-teacher{
+    width: 100%;
   }
 
   .staff {
@@ -604,15 +717,19 @@ footer {
 
 
 @media (max-width:414px) {
+  .br-sp{
+    display: block;
+  }
+
 
   /* nav{
     top: 50px;
   } */
-  header #nav_toggle {
+  /* header #nav_toggle {
     -ms-transform: translate(0,-2px);
     -webkit-transform: translate(0,-2px);
     transform: translate(0,-2px)
-  }
+  } */
 
 /* .site-logo img {height: 4rem} */
 
@@ -621,20 +738,10 @@ footer {
 }
 
 .keikan_ken {height: 200px}
-.keikan .title::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.keikan_ken .title span {
-  float: left;
-  width: 100%;
-}
 
 .keikan_ken .title .todai{
   font-size: 2rem;
-  opacity: 0.6;
-  letter-spacing: 1rem;
+  letter-spacing: 0.2rem;
   -ms-transform: translate(22%,9px);
   -webkit-transform: translate(22%,9px);
   transform: translate(22%,9px);
@@ -644,6 +751,15 @@ footer {
   -ms-transform: translate(15%,12px);
   -webkit-transform: translate(15%,12px);
   transform: translate(15%,12px);
+}
+
+
+.flex-news{
+  justify-content: center;
+  flex-direction: column;
+}
+.item1{
+  margin-bottom: 1rem;
 }
 
 .staff {
@@ -658,11 +774,7 @@ footer {
 }
 
 /* フッターここから */
-.link-box {padding: 1rem;}
-.univ {padding: 0;}
-.univ p a {
-  font-size: 1rem;
-  padding: 5px 5px;}
+
 /* フッターここまで */
 
 /* スクロールボタンここから */
@@ -680,5 +792,9 @@ footer {
 transform: translate(0,-10px)
 }
 /* スクロールボタンここまで */
+.footer-box{
+  width: 100%;
+}
+
 
 }
