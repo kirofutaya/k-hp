@@ -203,7 +203,7 @@ header nav li {
   position: relative;
   text-align: center;
   width: 100%;
-  height: 500px;
+  height: 750px;
 }
 
 .keikan_ken::before{
@@ -736,8 +736,6 @@ height: 100%;
 .content-outer {
   padding-top: 4rem;
 }
-
-.keikan_ken {height: 200px}
 
 .keikan_ken .title .todai{
   font-size: 2rem;
