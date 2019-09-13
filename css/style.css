@@ -14,7 +14,7 @@ html{
 }
 body {
   font-size: 1.4rem;
-  font-family:Judson, "Hiragino Kaku Gothic ProN", Meiryo, 'Sawarabi Mincho', sans-serif, 'Rokkitt', serif;
+  font-family:Judson, "Hiragino Kaku Gothic ProN", Meiryo, 'Sawarabi Mincho', sans-serif;
 }
 .clearfix::after {
   content: "";
@@ -32,7 +32,7 @@ body {
   top: 0;
   z-index: 30;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(40,40,40,0.8);
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.25);
           box-shadow: 0 1px 1px rgba(0,0,0,0.25);
 }
@@ -43,8 +43,8 @@ header .inner {
   margin: 0;
 }
 
-.no-boxshadow.page-header {
-    border-bottom: 1px solid rgb(204, 204, 204);
+.no-boxshadow .page-header {
+    border-bottom: 1px solid #ffffff;
 }
 
 /* 中身 */
@@ -60,6 +60,10 @@ header #nav_toggle {
   -webkit-transform: translate(0,3px);
   transform: translate(0,3px);
 }
+header #nav_toggle span{
+  background-color:  #f5f5f5;
+}
+
 
 /* Primary nav */
 header nav {
@@ -79,11 +83,11 @@ header nav ul {
 
 .nav-item a {
     font-family: serif;
-    color: rgb(100, 100, 100);
+    color: #f5f5f5;
 }
 
 .nav-item a:hover{
-  color: black;
+  color: #ffffff;
 }
 
 .nav-item a {display: inline-block;}
@@ -92,7 +96,7 @@ header nav ul {
   display: block;
   width: 0;
   margin: 5px auto 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ffffff;
   transition: width 0.3s ease-in-out;
 }
 
@@ -100,8 +104,9 @@ header nav ul {
   width: 100%;
 }
 
-
 /******* ヘッダー終了 *******/
+
+
 .content-outer {
   max-width: 1040px;
   padding: 6rem 2rem 0 2rem;
@@ -358,8 +363,41 @@ footer {
 
 
 
-/* スクロールボタンここから */
-#page-top {
+/* スクロールボタン */
+.back-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    color: #fff;
+    width: 5rem;
+    height: 5rem;
+    z-index: 2;
+    display: none;
+}
+.back-to-top:before {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    border-radius: 2.5rem;
+    border: 0.2rem 0.2rem 0.2rem 0.2rem;
+    border-color: #fff;
+    left: 0;
+    top: 0;
+    background: #696969;
+}
+.back-to-top i {
+    display: block;
+    text-align: center;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* #page-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -379,7 +417,7 @@ footer {
 #page-top a:hover {
     text-decoration: none;
     background: #999;
-}
+} */
 
 /* スクロールボタンここまで */
 
@@ -398,7 +436,7 @@ footer {
 		position: absolute;
 		top:60px;
 		width: 100%;
-		background: rgb(255, 255, 255);
+		background: rgba(40, 40, 40, 0.8);
 		left: 0;
 	}
 	header nav ul{
@@ -518,11 +556,11 @@ footer {
 
 @media (max-width:768px) {
 
-  nav{
+  /* nav{
     top: 55px;
   }
 
-  .site-logo img {height: 4.5rem}
+  .site-logo img {height: 4.5rem} */
 
 
   .keikan_ken {height: 300px}
@@ -565,18 +603,18 @@ footer {
 }
 
 
-@media (max-width:550px) {
+@media (max-width:414px) {
 
-  nav{
+  /* nav{
     top: 50px;
-  }
+  } */
   header #nav_toggle {
     -ms-transform: translate(0,-2px);
     -webkit-transform: translate(0,-2px);
     transform: translate(0,-2px)
   }
 
-.site-logo img {height: 4rem}
+/* .site-logo img {height: 4rem} */
 
 .content-outer {
   padding-top: 4rem;
