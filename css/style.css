@@ -499,7 +499,7 @@ header nav li {
     height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: 1s;
+    transition: 1.5s;
     visibility: hidden;
 }
 .acd-check:checked + .acd-label + .acd-content{
@@ -582,7 +582,8 @@ header nav li {
 
 .event-wrap .conpe2014-img,
 .event-wrap .conpe2013-img,
-.event-wrap .zisyu2015-img{
+.event-wrap .zisyu2015-img,
+.project-wrap .project-img{
   width: 100%;
   max-width: 600px;
 }
@@ -635,7 +636,7 @@ header nav li {
   width: 100%;
 }
 
-.caption{
+.pro .caption{
   position: absolute;
   bottom: 0;
   left: 0;
@@ -646,12 +647,15 @@ header nav li {
   font-size: 1.8rem;
   color: #f5f5f5;
 }
-.caption span:before{
+.pro .caption span:before{
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: '\f105';
   margin-right: 1rem;
 }
+
+/* 個別プロジェクトページ */
+/* →基本的にconpe2014と一緒 */
 
 /* フッターここから */
 footer {
@@ -1001,7 +1005,7 @@ height: 100%;
 }
 
 /* リサーチページ */
-.caption{
+.pro .caption{
   width: 100%;
   background-color: rgba(40,40,40,0.6);
   padding: 0.5rem 0;
