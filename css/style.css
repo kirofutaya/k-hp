@@ -562,6 +562,8 @@ header nav li {
   letter-spacing: 0.05rem;
   line-height: 2.4rem;
   margin-bottom: 1.6rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 .event-wrap li {
   font-size: 1.8rem;
