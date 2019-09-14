@@ -44,17 +44,17 @@ $(function () {
     });
 
 // コンタクトスクロール
-  $(".to-contact").click(function() {
-        var href= $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
-        position = position - 30;
+$('a[href^="#"]').click(function(){
+  var speed = 800;
+  var href= $(this).attr("href");
+  var target = $(href == "#" || href == "" ? 'html' : href);
+  var position = target.offset().top;
+  position = position - 80;
+  $("html, body").animate({scrollTop:position}, speed, "swing");
+  return false;
+});
 
-        $('body,html').animate({
-          scrollTop:position
-        },800);
-        return false;
-      });
+
 
 
 // // スティッキーヘッダー
