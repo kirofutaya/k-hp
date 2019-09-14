@@ -43,7 +43,18 @@ $(function () {
         return false;
     });
 
+// コンタクトスクロール
+  $(".to-contact").click(function() {
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        position = position - 30;
 
+        $('body,html').animate({
+          scrollTop:position
+        },800);
+        return false;
+      });
 
 
 // // スティッキーヘッダー
@@ -70,7 +81,22 @@ $(function () {
 //      $window.trigger('scroll');
 //    })
 
+// Hiddenチェックボックスの文字変更
+$('input[name="check1"]').change(function() {
 
+  // prop()でチェックの状態を取得
+  var prop = $('#check1').prop('checked');
+
+  // もしpropがチェック状態だったら
+  if (prop) {
+    // propでチェックと出力
+    $('.check').text('× CLOSE');
+  } else {
+    // テキストをリセット
+    $('.check').text('READ MORE');
+  }
+
+});
 
 
 
