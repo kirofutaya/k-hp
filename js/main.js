@@ -1,7 +1,30 @@
 // javascriptが有効になってない！！
 
+$(window).on('load', function(){
+  //ページ全体が読み込まれた時の処理
+   var h = $(window).height();
+    $('#loading__wrapper').css('display','none');
+    $('#is-loading ,#loading').height(h).css('display','block');
+
+    $('#is-loading').delay(900).fadeOut(800);
+    $('#loading').delay(600).fadeOut(300);
+    $('#loading__wrapper').css('display', 'block');
+    $('.site-title').delay(1000).fadeIn(2500);
+
+    setTimeout('stopload()',10000);
+
+    function stopload(){
+     $('#loading__wrapper').css('display','block');
+     $('#is-loading').delay(900).fadeOut(800);
+     $('#loading').delay(600).fadeOut(300);
+     $('.site-title').delay(1000).fadeIn(2500);
+   }
+
+});
+
 
 $(function () {
+
 
 // ナビゲーションバー
     $(window).scroll(function(){
@@ -93,13 +116,9 @@ $('input[name="check1"]').change(function() {
     $('.check').text('× CLOSE');
   } else {
     // テキストをリセット
-    $('.check').text('READ MORE');
+    $('.check').text('Former Staff');
   }
 
 });
-
-
-
-
 
 });

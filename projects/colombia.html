@@ -91,6 +91,57 @@
         <p>・川添善行／中井祐／内藤廣<br><a class="get_pdf" href="documents/CAIE4th2008kawazoe.pdf" target="_blank">コロンビア・メディジン市におけるベレン公園図書館の建設<br>景観・デザイン研究講演集 No.4 2008 pp.86-92</a></p>
       </div>
 
+      <!-- スライドショー -->
+        <a class="back-button" href="../project.html">Other Projects</a>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><a href="./yamanakako.html"><img src="../images/others/yamanakako.jpg"></a></div>
+                <div class="swiper-slide"><a href="./otsuchi.html"><img src="../images/others/otsuchi.jpg"></a></div>
+                <div class="swiper-slide"><a href="./taketa.html"><img src="../images/others/taketa.jpg"></a></div>
+                <!-- <div class="swiper-slide"><a href="./colombia.html"><img src="../images/others/colombia.jpg"></a></div> -->
+                <div class="swiper-slide"><a href="http://keikan.t.u-tokyo.ac.jp/gs/exhibition/index.html"><img src="../images/others/groundscape.jpg"></a></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <script>
+            var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+            loop: true,
+            speed: 500,
+            autoHeight: true,
+            slidesPerView: 2,
+            spaceBetween: 10,
+            centeredSlides : true,
+            autoplay: {delay: 3000},
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+            },
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            // And if we need scrollbar
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            },
+            breakpoints: {
+              767: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+              }
+            },
+          })
+        </script>
+
   </div>
 </section>
 
@@ -110,7 +161,7 @@
       <h4>Contact</h4>
         <p>Tel : 03-5841-7450</p>
         <p>Fax : 03-5841-7450</p>
-        <p>Mail : 迷惑メール対策のため、お手数ですが<a href="../member.html">Members</a>ページ内に記載の福島助教のアドレスにご連絡ください。</p>
+        <p>Mail : 迷惑メール対策のため、お手数ですが<a href="./member.html">Members</a>ページ内に記載の福島助教のアドレスにご連絡ください。</p>
         <p>* As a prevention measure regarding spam you can find the e-mail addresses of
         Mr.Fukushima at the 'Members' page in form of a jpg.</p>
       </div>
@@ -119,11 +170,11 @@
       <h3 class="footer-title">Link</h3>
       <div class="footer-content">
         <ul>
-          <li><a href="#">東京大学</a></li>
-          <li><a href="#">工学部/大学院工学系研究科</a></li>
-          <li><a href="#">社会基盤学科/社会基盤学専攻</a></li>
-          <li><a href="#">GSデザイン会議</a></li>
-          <li><a href="#">GSDy</a></li>
+          <li><a href="http://www.u-tokyo.ac.jp/">東京大学</a></li>
+          <li><a href="http://www.t.u-tokyo.ac.jp/">工学部/大学院工学系研究科</a></li>
+          <li><a href="http://www.civil.t.u-tokyo.ac.jp/">社会基盤学科/社会基盤学専攻</a></li>
+          <li><a href="http://www.groundscape.jp/">GSデザイン会議</a></li>
+          <li><a href="http://www.groundscape.jp/youth/index.html">GSDy</a></li>
         </ul>
       </div>
     </div>
