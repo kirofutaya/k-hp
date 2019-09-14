@@ -347,6 +347,11 @@ header nav li {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
   border-left: 6px solid rgba(40,40,40);
 }
+.meado {
+  width: auto;
+  height: 3rem;
+  margin-top: 1rem;
+}
 /* hoverで上からマスク */
   .hover-mask {
   	overflow:		hidden;
