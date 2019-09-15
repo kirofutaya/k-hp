@@ -38,6 +38,18 @@ a {
   color: #000000;
 }
 
+.fadein {
+ opacity: 0;
+ transform : translate(0, 50px);
+ transition : all 1500ms;
+}
+
+.fadein.scrollin{
+ opacity: 1;
+ transform: translate(0, 0);
+}
+
+
 /********ヘッダー開始********/
 
 /* デフォルト */
@@ -315,6 +327,28 @@ header nav li {
 .signature{
   text-align: right;
 }
+.concept-background {
+  background: url(../images/room.jpg) no-repeat center top;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 300px;
+}
+
+.concept-background::before{
+	/* 透過した黒を重ねる */
+	background-color: rgba(0,0,0,0.5);
+	/* どの範囲に重ねるかを指定 */
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+}
+
 
 /* メンバーページ */
 .section-members{
@@ -340,6 +374,7 @@ header nav li {
 .flex-staff, .flex-student{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5rem;
 }
 .flex-staff > * {
   width: 32%;
@@ -360,7 +395,7 @@ header nav li {
   .hover-mask .caption {
   	font-size: 2.4rem;
   	text-align: center;
-  	padding-top: 3.5rem;
+  	padding-top: 5rem;
   	color: #f5f5f5;
   }
   .hover-mask .mask {
@@ -400,9 +435,7 @@ header nav li {
 
 
 /* formerstaff開閉ボタン */
-  .hidden_box{
-    margin-top: 4rem;
-  }
+
   .check {
     display: block;
     text-align: center;
@@ -520,10 +553,9 @@ header nav li {
   border-bottom: 1px solid rgb(40,40,40);
   margin-bottom: 2rem;
   margin-top: 4rem;
-  /* font-size: 2.4rem;
-  padding-left: 1rem;
-  border-left: 6px solid rgb(40,40,40);
-  margin-bottom: 2rem; */
+}
+.acd-content h3:first-child{
+  margin-top: 2rem;
 }
 .paper-name:before{
   font-family: 'Font Awesome 5 Free';
@@ -660,6 +692,40 @@ header nav li {
   content: '\f105';
   margin-right: 1rem;
 }
+
+
+
+
+.hover-mask-pro {
+  overflow:		hidden;
+  position:		relative;	/* 相対位置指定 */
+}
+.hover-mask-pro .caption2 {
+  font-size: 5rem;
+  text-align: center;
+  color: #f5f5f5;
+}
+.hover-mask-pro .mask2 {
+  width:100%;
+  height:100%;
+  position: absolute;	/* 絶対位置指定 */
+  top:0;
+  left:0;
+  opacity:0;	/* マスクを表示しない */
+  background-color:	rgba(40,40,40,0.6);
+  -webkit-transition:	all 0.3s ease;
+  transition:		all 0.3s ease;
+}
+.hover-mask-pro:hover .mask2 {
+  opacity:1;
+  padding-top: 18rem;	/* マスクを表示する */
+}
+
+
+
+
+
+
 
 /* 個別プロジェクトページ */
 /* →基本的にconpe2014と一緒 */
@@ -856,15 +922,6 @@ height: 100%;
 /* ヘッダーここまで */
 
   .keikan_ken {height: 400px}
-  /* .keikan .title::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  .keikan_ken .title span {
-    float: left;
-    width: 100%;
-  } */
 
   .keikan_ken .title .todai{
     font-size: 3.5rem;
@@ -880,21 +937,13 @@ height: 100%;
     transform: translate(15%,0);
   }
 
+.concept-background{
+  height: 150px;
+}
 
-
-/* フッター */
-.out1, .out2{
-  float: none;
-  width: 100%;
+.hover-mask-pro:hover .mask2 {
+  padding-top: 13rem;	/* マスクを表示する */
 }
-.out2 {
-  text-align: center;
-  padding-top: 2rem;
-}
-.out2 iframe {
-  display: inline-block;
-}
-/* フッター */
 
 }
 
@@ -911,11 +960,6 @@ height: 100%;
   .footer-box{
     margin-bottom: 2rem;
   }
-  /* nav{
-    top: 55px;
-  }
-
-  .site-logo img {height: 4.5rem} */
 
 
   .keikan_ken {
@@ -951,6 +995,14 @@ height: 100%;
     padding-top: 7rem;
   }
 
+  .concept-background {
+    background-attachment: scroll;
+  }
+
+  .hover-mask-pro .mask2{
+    display: none;
+  }
+
 }
 
 
@@ -981,12 +1033,6 @@ height: 100%;
   -ms-transform: translate(22%,9px);
   -webkit-transform: translate(22%,9px);
   transform: translate(22%,9px);
-}
-.keikan_ken .title .ken{
-  font-size: 3rem;
-  -ms-transform: translate(15%,12px);
-  -webkit-transform: translate(15%,12px);
-  transform: translate(15%,12px);
 }
 .flex-news{
   justify-content: center;
