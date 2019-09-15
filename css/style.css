@@ -49,9 +49,18 @@ a {
  transform: translate(0, 0);
 }
 
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
 
-/********ヘッダー開始********/
 
+
+
+
+/********コンテンツ開始********/
+
+/* ナビゲーションバー */
 /* デフォルト */
 .page-header.sticky {
   position: fixed;
@@ -248,10 +257,7 @@ header nav li {
   height: auto;
 }
 /* ニュース */
-.flex-center{
-  display: flex;
-  justify-content: center;
-}
+
 
 .flex-news{
   display: flex;
@@ -528,6 +534,7 @@ header nav li {
     margin-bottom: 1px;
     padding: 10px;
     font-size: 1.8rem;
+    transition: 0.2s;
 }
 .acd-label:hover{
   opacity: 0.5;
@@ -685,16 +692,61 @@ header nav li {
   text-align: center;
   font-size: 1.8rem;
   color: #f5f5f5;
-}
-.pro .caption span:before{
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: '\f105';
-  margin-right: 1rem;
+  z-index: 60;
 }
 
+/* スクロール指示 */
+.pleaseScroll {
+  margin; auto;
+  padding-top: 7rem;
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+}
+.pleaseScroll::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid rgb(40,40,40);
+  border-bottom: 1px solid rgb(40,40,40);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
 
-
+/* ホバー */
 
 .hover-mask-pro {
   overflow:		hidden;
@@ -713,8 +765,8 @@ header nav li {
   left:0;
   opacity:0;	/* マスクを表示しない */
   background-color:	rgba(40,40,40,0.6);
-  -webkit-transition:	all 0.3s ease;
-  transition:		all 0.3s ease;
+  -webkit-transition:	all 0.5s ease;
+  transition:		all 0.5s ease;
 }
 .hover-mask-pro:hover .mask2 {
   opacity:1;
@@ -835,9 +887,52 @@ height: 100%;
 
 
 
-/************************************
+
+
+
+
+
+/*
+
+スヌーピー
+遊び心 by Kiro
+
+┈╱▔▔▔▔▔▔▔╲┈┈
+┈▏┈┈╰╯╯╯┈▕┈┈
+╭▏┈▕▏┗╮▎┈▕╮┈
+╰▏┈┈┈┏╯┈┈▕╯┈
+┈▏┈╲▂▂▂╱┈▕┈┈
+┈╲┈┈┈┈┈┈┈╱┈┈
+┈┈▔▔▏┈▕▔▔┈┈┈
+
+    ●
+　　/⌒ヽ
+　 ｜ 　|/⌒ヽ(ヽ
+　 (｀　∥ー⌒) |
+　|￣||￣￣￣￣￣|
+　|―||―――――|
+　|　Ｕ　　　　　|
+　|￣￣￣￣￣￣￣|
+　|＿＿＿＿＿＿＿|
+　　|―――――|
+　　|―――――|
+ｗｗＷｗｗＷｗＷＷｗ
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+/************************************************
 レスポンシブデザイン
-*************************************/
+*************************************************/
 
 @media (max-width:1040px) {
 /* ヘッダー */
@@ -999,6 +1094,12 @@ height: 100%;
     background-attachment: scroll;
   }
 
+  .pro .caption span:before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f105';
+    margin-right: 1rem;
+  }
   .hover-mask-pro .mask2{
     display: none;
   }

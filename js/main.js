@@ -1,10 +1,7 @@
-// javascriptが有効になってない！！
-
-
 $(function () {
 
 
-// ナビゲーションバー
+// トップページにおいてナビゲーションバーの色を一定スクロール後に変える
     $(window).scroll(function(){
       if ($('.keikan_ken').length){
         var h = $('.keikan_ken').height();
@@ -16,7 +13,6 @@ $(function () {
       } else {
         $('.page-header').addClass('visible');
       }
-
     });
 
 // ハンバーガーメニュー
@@ -25,7 +21,7 @@ $(function () {
 			    $("nav").slideToggle(500);
 				});
 
-// スクロールボタン
+// トップまで戻る右下のスクロールボタン
     var topBtn = $('.back-to-top');
     topBtn.hide();
     //スクロールが100に達したらボタン表示
@@ -44,7 +40,7 @@ $(function () {
         return false;
     });
 
-// コンタクトスクロール
+// メニューのコンタクトを押すとフッターまでスクロールする
 $('a[href^="#"]').click(function(){
   var speed = 800;
   var href= $(this).attr("href");
@@ -54,8 +50,6 @@ $('a[href^="#"]').click(function(){
   $("html, body").animate({scrollTop:position}, speed, "swing");
   return false;
 });
-
-
 
 
 // // スティッキーヘッダー
@@ -82,33 +76,31 @@ $('a[href^="#"]').click(function(){
 //      $window.trigger('scroll');
 //    })
 
+
 // Hiddenチェックボックスの文字変更
 $('input[name="check1"]').change(function() {
-
   // prop()でチェックの状態を取得
   var prop = $('#check1').prop('checked');
-
   // もしpropがチェック状態だったら
   if (prop) {
-    // propでチェックと出力
-    $('.check').text('× CLOSE');
+    $('.check').text('× CLOSE'); // propでチェックと出力
   } else {
-    // テキストをリセット
-    $('.check').text('Former Staff');
+    $('.check').text('Former Staff');// テキストをリセット
   }
-
 });
 
 // スクロールするとフェードイン
 $(window).scroll(function (){
    $('.fadein').each(function(){
-       var elemPos = $(this).offset().top,
-           scroll = $(window).scrollTop(),
-           windowHeight = $(window).height();
-         if (scroll > elemPos - windowHeight + 500){
-             $(this).addClass('scrollin');
-           }
-       });
+     var elemPos = $(this).offset().top,
+         scroll = $(window).scrollTop(),
+         windowHeight = $(window).height();
+     if (scroll > elemPos - windowHeight + 500){
+         $(this).addClass('scrollin');
+      }
    });
+});
+
+
 
 });
