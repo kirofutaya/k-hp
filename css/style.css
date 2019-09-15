@@ -507,7 +507,6 @@ header nav li {
   font-size: 2.4rem;
 }
 
-
 .student{
   width: 25%;
   padding: 0 1rem;
@@ -561,8 +560,8 @@ header nav li {
       opacity: 1;
   }
   .formerstaffs p{
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
   }
   .formerstaffs li {
     width: auto;
@@ -573,6 +572,8 @@ header nav li {
   }
   .formerstaffs li {
     margin-bottom: 1rem;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
   }
   .formerstaffs li:hover{
     background-color: rgba(40,40,40,0.2)
