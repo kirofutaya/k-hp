@@ -1199,8 +1199,6 @@ height: 100%;
   .swiper-title{
     margin-bottom: 3rem;
   }
-
-
   .flex-footer{
     flex-wrap: wrap;
   }
@@ -1210,7 +1208,6 @@ height: 100%;
   .footer-box{
     margin-bottom: 2rem;
   }
-
 
   .keikan_ken {
     height: 300px;
@@ -1265,14 +1262,13 @@ height: 100%;
 .br-sp{
     display: block;
 }
-
 .keikan_ken {
   background: url(../images/eitaibashi2.jpg) no-repeat center top;
   width: 100%;
   height: 896px;
 }
 .keikan_ken .title{
-  top: 40%;
+  top: 35%;
 }
 .keikan_ken .title .todai{
   font-size: 4rem;
