@@ -542,6 +542,8 @@ header nav li {
 
 
 
+
+
 /* リサーチページ */
 /*
 チーバ君
@@ -644,28 +646,33 @@ header nav li {
 
 
 /* イベントページ */
-.section-event{
+.section-event,
+.section-professor{
   padding: 10rem 2rem 2rem;
   background-color: rgb(245,245,245);
 }
-.event-wrap{
+.event-wrap,
+.professor-wrap{
   margin: auto;
   max-width: 1040px;
 }
-.event-wrap h1{
+.event-wrap h1,
+.professor-wrap h1{
   font-size: 3.2rem;
   padding: 1rem;
   width: 100%;
   border-bottom: 1px solid rgb(40,40,40);
   margin-bottom: 2rem;
 }
-.event-wrap h2{
+.event-wrap h2,
+.professor-wrap h2{
   font-size: 2.4rem;
   padding-left: 2rem;
   border-left: 6px solid rgb(40,40,40);
   margin-bottom: 2rem;
 }
-.event-wrap p {
+.event-wrap p,
+.professor-wrap p {
   font-size: 1.6rem;
   letter-spacing: 0.05rem;
   line-height: 2.4rem;
@@ -673,21 +680,25 @@ header nav li {
   max-width: 100%;
   overflow: hidden;
 }
-.event-wrap li {
+.event-wrap li,
+.professor-wrap li{
   font-size: 1.6rem;
   letter-spacing: 0.05rem;
   line-height: 2.4rem;
   margin-bottom: 1.6rem;
 }
-.event-wrap a{
+.event-wrap a,
+.professor-wrap a{
   opacity: 0.7;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.event-wrap a:hover{
+.event-wrap a:hover,
+.professor-wrap a:hover{
   opacity: 1;
 }
-.event-wrap div{
+.event-wrap div,
+.professor-wrap div{
   margin-bottom: 5rem;
 }
 /* 個別イベントページ */
@@ -855,11 +866,6 @@ header nav li {
 }
 
 
-
-
-
-
-
 /* 個別プロジェクトページ */
 /* →基本的にconpe2014と一緒 */
 .project-wrap > div{
@@ -881,7 +887,23 @@ a.back-button:hover {
 }
 
 
-/* フッターここから */
+
+
+
+
+
+/* フッター */
+/*
+┈╱▔▔▔▔▔▔▔╲┈┈
+┈▏┈┈╰╯╯╯┈▕┈┈
+╭▏┈▕▏┗╮▎┈▕╮┈
+╰▏┈┈┈┏╯┈┈▕╯┈
+┈▏┈╲▂▂▂╱┈▕┈┈
+┈╲┈┈┈┈┈┈┈╱┈┈
+┈┈▔▔▏┈▕▔▔┈┈┈
+ */
+
+
 footer {
   background-color: rgb(40, 40, 40);
   width: 100%;
@@ -969,13 +991,6 @@ height: 100%;
 
 スヌーピー
 
-┈╱▔▔▔▔▔▔▔╲┈┈
-┈▏┈┈╰╯╯╯┈▕┈┈
-╭▏┈▕▏┗╮▎┈▕╮┈
-╰▏┈┈┈┏╯┈┈▕╯┈
-┈▏┈╲▂▂▂╱┈▕┈┈
-┈╲┈┈┈┈┈┈┈╱┈┈
-┈┈▔▔▏┈▕▔▔┈┈┈
 
     ●
 　　/⌒ヽ
