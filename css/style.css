@@ -70,12 +70,6 @@ a {
 }
 
 
-
-
-
-
-/********コンテンツ開始********/
-
 /* ナビゲーションバー */
 /* デフォルト */
 .page-header.sticky {
@@ -159,9 +153,9 @@ header nav li {
 
 
 
-/******* ヘッダー終了 *******/
+/* ヘッダー終了 */
 
-/******* スクロールボタン *****/
+/* スクロールボタン */
 .back-to-top {
     position: fixed;
     right: 2rem;
@@ -194,17 +188,25 @@ header nav li {
     left: 0;
     top: 0;
 }
-/******** スクロールボタンここまで ********/
+/* スクロールボタン終了 */
 
+
+/*******トップページ ********/
+/*
+カリカリカリ…
+　　 　Λ＿Λ
+　　　(・∀・ ）
+　　＿φ＿__⊂)__
+.　／旦／三／ ／|
+　|￣￣￣￣￣|　|
+　|愛媛みかん|／
+ */
 
 .index-wrap{
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: rgb(245,245,245);
 }
-
-
-/*******トップページ ********/
 .keikan_ken {
   background: url(../images/eitaibashi.jpg) no-repeat center top;
   background-attachment: fixed;
@@ -261,7 +263,7 @@ header nav li {
 }
 
 .swiper-title{
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 5rem;
   text-align: center;
 }
@@ -273,9 +275,8 @@ header nav li {
 }
 .item1,.item2{
   display: inline-block;
-}
-.item2{
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 .newsList {
@@ -310,7 +311,6 @@ header nav li {
   /* 時間の設定 */
 .newsList li time {
   display: inline-block;
-  font-size: 1.4rem;
   width: auto;
   margin-right: 2rem;
 }
@@ -460,13 +460,18 @@ header nav li {
   	opacity:1;	/* マスクを表示する */
   }
 
-.flex-staff h3{
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.flex-staff p{
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
 }
-.staff p {
+.staff p.english-name{
+  margin-bottom: 2px;
+}
+.staff h3 {
   font-size: 2.4rem;
 }
+
+
 .student{
   width: 25%;
   padding: 0 1rem;
@@ -476,10 +481,16 @@ header nav li {
   margin-bottom: 1rem;
 }
 .student li{
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
-
+.student h3::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 60%;
+  content: '\f0c8';
+  margin-right: 1rem;
+}
 
 /* formerstaff開閉ボタン */
 
@@ -894,6 +905,7 @@ a.back-button:hover {
 
 /* フッター */
 /*
+チャーリーブラウン
 ┈╱▔▔▔▔▔▔▔╲┈┈
 ┈▏┈┈╰╯╯╯┈▕┈┈
 ╭▏┈▕▏┗╮▎┈▕╮┈
@@ -934,11 +946,12 @@ footer {
 .footer-box h4{
   font-size: 2.4rem;
   color: #dddddd;
-  padding-bottom:1rem;
+  padding-bottom:0.5rem;
 }
 .footer-box p{
   font-size: 1.4rem;
   padding-bottom: 0.5rem;
+  line-height: 2rem;
   color: #dddddd;
 }
 .footer-box li{
@@ -947,11 +960,25 @@ footer {
 .footer-box a{
   font-size: 1.4rem;
   color: #aaaaaa;
+  /* transition: 0.3s;
+  -webkit-transition: 0.3s; */
+  display: inline-block;
 }
 .footer-box a:hover{
-  transition: 0.2s;
-  color: #dddddd;
+  color: #ffffff;
 }
+.footer-box a::after {
+  content: '';
+  display: block;
+  width: 0;
+  margin: 5px auto 0;
+  border-bottom: 1px solid #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+.footer-box a:hover::after {
+  width: 100%;
+}
+
 .info-box h4:before{
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
@@ -1254,13 +1281,7 @@ height: 100%;
     width: 100%;
     margin-bottom: 1rem;
 }
-.student h3::before{
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  font-size: 60%;
-  content: '\f0c8';
-  margin-right: 1rem;
-}
+
 
 .research-wrap h2{
   font-size: 2.4rem;
