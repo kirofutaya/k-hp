@@ -54,6 +54,22 @@ a {
   justify-content: center;
 }
 
+.get_pdf{
+  font-size: 1.6rem;
+  color: rgba(40,40,40,0.7);
+}
+.get_pdf:hover{
+  color: rgba(0,0,0,1);
+  transition: 0.5s;
+}
+.get_pdf:after{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f35d';
+  margin-left: 1rem;
+}
+
+
 
 
 
@@ -167,19 +183,6 @@ header nav li {
     top: 0;
     background-color: #696969;
 }
-/* .back-to-top div:before {
-  content: "\f077";
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  display: block;
-  text-align: center;
-  width: 5rem;
-  height: 5rem;
-  line-height: 5rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-} */
 
 .back-to-top i {
     display: block;
@@ -194,7 +197,7 @@ header nav li {
 /******** スクロールボタンここまで ********/
 
 
-.content-wrap{
+.index-wrap{
   padding-top: 5rem;
   padding-bottom: 5rem;
   background-color: rgb(245,245,245);
@@ -309,6 +312,20 @@ header nav li {
 
 
 /*********** コンセプトページ */
+/*
+プーさん
+＿
+(⌒)￣￣＼)
+ヽ　 /⌒　＼
+｜　　 ･　(･ヽ /⌒)
+｜　　　　●)|/しU
+ヽ　　ヽ＿ノノ＼/
+(￣`ー――イ＿_/＿
+｜　＼＿ヽ/( ○～ )
+/｜　/／￣￣)JU^U^ﾍ
+＼＼_Lﾚ–イ 　　　) 　
+ */
+
 .section-concept{
   padding: 10rem 2rem 2rem;
   background-color: rgb(245,245,245);
@@ -356,7 +373,25 @@ header nav li {
 }
 
 
+
+
 /* メンバーページ */
+/*
+ひまわり
+        ＿＿_/⌒＼
+　　　／　へ (⌒) )
+　　／(こ人ﾆ_人_／
+　 /ﾐ／⌒ヽ /⌒ L
+　｜/　(●) (●) ヽ
+　(⌒　 ー　 ー　 |
+　 ＞-､_＿＿＿｡＿ノ
+　(＿ ﾋ|　 ё ﾀ＿)
+　∧｜ヾ辷辷zﾀ｜∧
+（_(_)＞ー――＜(_)_)
+
+ */
+
+
 .section-members{
   padding: 10rem 2rem 2rem;
   background-color: rgb(245,245,245);
@@ -502,6 +537,20 @@ header nav li {
 
 
 /* リサーチページ */
+/*
+チーバ君
+ヘ＿＿／￣￣￣＼
+＼ﾉ　 (･)　ヽ_＿)
+　＼_ノ　　　丿
+　　(ﾉー、　 |
+　　　 ノ　　ヽ
+　　　/　　｜ |
+　　 ｜　　(_ノ
+　　　＼　　/
+　　　　)　/
+　　　 (＿ﾉ
+ */
+
 .section-research{
   padding: 10rem 2rem 2rem;
   background-color: rgb(245,245,245);
@@ -646,7 +695,22 @@ header nav li {
   margin-bottom: 0 !important;
 }
 
+
+
 /* プロジェクトページ */
+/*
+アンコウ
+／￣＼
+○ ／￣￣￣＼ヘ
+　 /・　 ・　 ＼>
+／￣￣￣＼　　 Ｖ|
+｜ ――― ｜　　｜|
+＼＿＿＿／　　 ∧|
+　　＼　　　　／〉
+　　　￣￣￣￣￣
+ */
+
+
 .section-project{
   padding: 10rem 2rem 2rem;
   background-color: rgb(245,245,245);
@@ -849,6 +913,14 @@ footer {
   transition: 0.2s;
   color: #dddddd;
 }
+.info-box h4:before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 60%;
+  content: '\f111';
+  margin-right: 1rem;
+}
+
 .ggmap {
 position: relative;
 padding-bottom: 56.25%;
@@ -873,22 +945,6 @@ height: 100%;
   color: #aaaaaa;
 }
 /* フッターここまで */
-
-
-.get_pdf{
-  font-size: 1.6rem;
-  color:#6495ed;
-}
-.get_pdf:hover{
-  color:#191970;
-  transition: 0.5s;
-}
-
-
-
-
-
-
 
 
 
