@@ -46,7 +46,7 @@ $(function () {
 			    $("nav").slideToggle(500);
 				});
 
-// トップまで戻る右下のスクロールボタン
+// 「トップまで戻る」右下のスクロールボタン
     var topBtn = $('.back-to-top');
     topBtn.hide();
     //スクロールが100に達したらボタン表示
@@ -77,31 +77,6 @@ $('a[href^="#"]').click(function(){
 });
 
 
-// // スティッキーヘッダー
-//   $('.page-header').each(function () {
-//
-//      var $window = $(window),
-//          $header = $(this),
-//          headerOffsetTop = $header.offset().top;
-//
-//      // ウィンドウのスクロールイベントを監視
-//      // (ウィンドウがスクロールするごとに処理を実行する)
-//      $window.on('scroll', function () {
-//
-//          if ($window.scrollTop() > headerOffsetTop) {
-//              $header.addClass('sticky');
-//          } else {
-//              $header.removeClass('sticky');
-//          }
-//
-//      });
-//
-//      // ウィンドウのスクロールイベントを発生させる
-//      // (ヘッダーの初期位置を調整するため)
-//      $window.trigger('scroll');
-//    })
-
-
 // Hiddenチェックボックスの文字変更
 $('input[name="check1"]').change(function() {
   // prop()でチェックの状態を取得
@@ -120,7 +95,7 @@ $(window).scroll(function (){
      var elemPos = $(this).offset().top,
          scroll = $(window).scrollTop(),
          windowHeight = $(window).height();
-     if (scroll > elemPos - windowHeight + 400){
+     if (scroll > elemPos - windowHeight + 370){
          $(this).addClass('scrollin');
       }
    });
