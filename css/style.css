@@ -979,6 +979,7 @@ footer {
   background-color: rgb(40, 40, 40);
   width: 100%;
   padding: 2rem;
+  z-index: 100;
 }
 .flex-footer{
   display: flex;
@@ -1073,6 +1074,8 @@ height: 100%;
 
 
 
+
+
 /*
 
 スヌーピー
@@ -1093,11 +1096,34 @@ height: 100%;
 
  */
 
+/* シングルページレイアウト（東京見学会） */
+.single-page {
+  background: #151515 url('../images/tokyo_study_tour/tokyoStation.jpg') no-repeat fixed center top;
+  background-size: cover;
+  color: #fff;
+}
+
+.tokyoStudyTour_title {
+  width: 100%;
+  padding: 10rem 2rem 0rem 2rem;
+  font-family: 'Sawarabi Mincho';
+  font-size: 4rem;
+  text-align: center;
+  line-height: 5rem;
+}
 
 
-
-
-
+.tokyoStudyTour_content div{
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.tokyoStudyTour_content h5 {
+  font-size: 2.4rem;
+  width: auto;
+  padding: 1em 0;
+  border-top: solid 3px white;
+  border-bottom: solid 3px white;
+}
 
 
 
@@ -1284,6 +1310,11 @@ height: 100%;
     display: none;
   }
 
+
+  .single-page{
+    background-attachment: scroll;
+  }
+
 }
 
 
@@ -1367,6 +1398,14 @@ height: 100%;
 .section-project h2{
   font-size: 1.8rem;
 }
+
+/* シングルページレイアウト（東京見学会） */
+.single-page {
+  background: url(../images/tokyo_study_tour/tokyoStation2.jpg) no-repeat center top;
+  width: 100%;
+  height: 896px;
+}
+
 
 /* スクロールボタンここから */
 #page-top {

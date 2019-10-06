@@ -38,7 +38,11 @@ $(function () {
       } else {
         $('.page-header').addClass('visible');
       }
+
+      $('.non-visible').removeClass('visible');
     });
+
+
 
 // ハンバーガーメニュー
 		$('#nav_toggle').click(function(){
