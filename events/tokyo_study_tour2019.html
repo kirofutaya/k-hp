@@ -73,20 +73,113 @@
 </section>
 
 <section class="tokyoStudyTour_content">
-  <div class="tokyoStudyTour_description">
+  <div class="tokyoStudyTour_description box">
+    <p>
+      東京を、歩く。<br>
+      <br>
+      私たちは土木を学ぶ者だ<br>
+      しかしこの東京について<br>
+      一体どれほど知っているのだろうか<br>
+      <br>
+      インフラに込められた<br>
+      近代先駆者たちの想いに<br>
+      耳を済ませ<br>
+      次の時代の東京を考えよう
+    </p>
   </div>
 
-  <div>
+  <div class="box">
+    <h5>主催</h5>
+    <p>東京大学景観研究室</p>
+    <p>法政大学景観研究室</p>
+  </div>
+
+  <div class="box">
     <h5>日時</h5>
+    <p>2019年 11月9日 土曜日</p>
   </div>
 
-  <div>
-    <h5>集合場所</h5>
+  <div class="box">
+    <h5>集合</h5>
+    <p>10:00＠日本橋駅</p>
   </div>
 
-  <div>
+  <div class="box">
     <h5>連絡先</h5>
+    <p>XXXXXX@keikan.t.u-tokyo.ac.jp</p>
   </div>
+
+
+  <!-- Slider main container -->
+  <div class="box">
+    <h5>昨年度の様子</h5>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../images/tokyo_study_tour/2018/slide-1.JPG"></div>
+            <div class="swiper-slide"><img src="../images/tokyo_study_tour/2018/slide-2.JPG"></div>
+            <div class="swiper-slide"><img src="../images/tokyo_study_tour/2018/slide-3.JPG"></div>
+            <div class="swiper-slide"><img src="../images/tokyo_study_tour/2018/slide-4.JPG"></div>
+            <div class="swiper-slide"><img src="../images/tokyo_study_tour/2018/slide-5.JPG"></div>
+            <div class="swiper-slide"><img src="../images/tokyo_study_tour/2018/slide-6.JPG"></div>
+            <div class="swiper-slide"><img src="../images/tokyo_study_tour/2018/slide-7.JPG"></div>
+            <div class="swiper-slide"><img src="../images/tokyo_study_tour/2018/slide-8.JPG"></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+  </div>
+  <script>
+      var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      loop: true,
+      speed: 500,
+      autoHeight: true,
+      slidesPerView: 2,
+      spaceBetween: 10,
+      centeredSlides : true,
+      autoplay: {delay: 3000},
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        }
+      },
+    })
+  </script>
+
+
+
+
+  <div class="box">
+    <h5>講義資料</h5>
+    <div class="passButton" onclick="gate();">Click Here</div>
+    <script type="text/javascript">
+       function gate() {
+          var UserInput = prompt("パスワードを入力して下さい:","");
+          location.href ="../documents/tokyoStudyTour/" + UserInput + ".pdf";
+       }
+    </script>
+  </div>
+
+
 </section>
 
 

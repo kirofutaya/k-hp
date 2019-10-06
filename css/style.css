@@ -103,8 +103,6 @@ a {
   z-index: 30;
   width: 100%;
   background-color: rgba(40,40,40,0);
-  /* -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.25);
-          box-shadow: 0 1px 1px rgba(0,0,0,0.25); */
   transition: 0.3s;
   transition-timing-function: ease-in-out;
 }
@@ -1105,29 +1103,56 @@ height: 100%;
 
 .tokyoStudyTour_title {
   width: 100%;
-  padding: 10rem 2rem 0rem 2rem;
+  padding: 15rem 2rem 5rem 2rem;
   font-family: 'Sawarabi Mincho';
   font-size: 4rem;
   text-align: center;
+  letter-spacing: 0.4rem;
   line-height: 5rem;
 }
 
 
-.tokyoStudyTour_content div{
-  margin-bottom: 2rem;
+.tokyoStudyTour_content div {
   text-align: center;
+  font-family: 'Sawarabi Mincho';
 }
+.tokyoStudyTour_content div.box{
+    margin-bottom: 10rem;
+}
+
 .tokyoStudyTour_content h5 {
-  font-size: 2.4rem;
-  width: auto;
-  padding: 1em 0;
+  font-size: 1.8rem;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 1.8rem 0;
   border-top: solid 3px white;
   border-bottom: solid 3px white;
 }
+.tokyoStudyTour_content .tokyoStudyTour_description p{
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+.tokyoStudyTour_content p {
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
 
-
-
-
+.passButton{
+  background-color: rgba(255,255,255,0.1);
+  display: inline-block;
+  font-size: 2.4rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: white;
+  border: solid 2px white;
+  border-radius: 3px;
+  transition: .3s;
+}
+.passButton:hover{
+  cursor: pointer;
+  background-color: rgba(255,255,255,0.3);
+}
 
 /************************************************
 レスポンシブデザイン
@@ -1400,12 +1425,27 @@ height: 100%;
 }
 
 /* シングルページレイアウト（東京見学会） */
+/* iphoneはこうやらないposition:coverが効かない！ */
 .single-page {
-  background: url(../images/tokyo_study_tour/tokyoStation2.jpg) no-repeat center top;
-  width: 100%;
-  height: 896px;
+  background-image: none;
+  position: relative;
+}
+.single-page:before{
+content:"";
+display:block;
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+width:100%;
+height:100vh;
+background:url('../images/tokyo_study_tour/tokyoStation2.jpg') center no-repeat;
+background-size:cover;
 }
 
+.tokyoStudyTour_content h5 {
+  width: 80%;
+}
 
 /* スクロールボタンここから */
 #page-top {
