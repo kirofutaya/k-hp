@@ -1,0 +1,7 @@
+
+a:link  { color: #00f; text-decoration: none }
+a:hover    { color: red; text-decoration: none }
+a:visited   { color: #555; text-decoration: none }
+p    { font-style: normal; font-weight: normal; font-size: 10pt; line-height: 14pt; margin-bottom: 14pt }
+td    { font-style: normal; font-weight: normal; font-size: 10pt; line-height: 14pt; margin-bottom: 10pt }
+H6  { font-style: normal; font-weight: normal; font-size: 10pt; line-height: 12pt }

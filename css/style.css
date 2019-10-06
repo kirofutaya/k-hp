@@ -267,7 +267,7 @@ header nav li {
 .keikan_ken .title {
   display: none;
   position: absolute;
-  top: 48%;
+  top: 45%;
   left: 50%;
   width: 100%;
   font-family: 'Sawarabi Mincho';
@@ -1106,6 +1106,12 @@ height: 100%;
 /************************************************
 レスポンシブデザイン
 *************************************************/
+
+@media (min-width:1700px) {
+.keikan_ken{
+ height: 1100px;
+}
+}
 
 @media (max-width:1040px) {
 /* ヘッダー */
