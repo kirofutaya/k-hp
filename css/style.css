@@ -1111,13 +1111,45 @@ height: 100%;
   line-height: 5rem;
 }
 
+.tokyoStudyTour_title .sub-title {
+  font-size: 2rem;
+  color: rgba(255,255,255,0.8);
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+
+.tokyoStudyTour_title .sub-title:before,
+.tokyoStudyTour_title .sub-title:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.tokyoStudyTour_title .sub-title:before {
+  left:0;
+}
+.tokyoStudyTour_title .sub-title:after {
+  right: 0;
+}
+
 
 .tokyoStudyTour_content div {
   text-align: center;
   font-family: 'Sawarabi Mincho';
 }
 .tokyoStudyTour_content div.box{
+    width: 80%;
+    margin: auto;
     margin-bottom: 10rem;
+    padding: 4rem 2rem;
+}
+.tokyoStudyTour_content div.box.black{
+    background-color: rgba(40,40,40,0.4);
 }
 
 .tokyoStudyTour_content h5 {
@@ -1126,16 +1158,24 @@ height: 100%;
   margin: auto;
   margin-bottom: 2rem;
   padding: 1.8rem 0;
-  border-top: solid 3px white;
-  border-bottom: solid 3px white;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
 }
 .tokyoStudyTour_content .tokyoStudyTour_description p{
   font-size: 1.8rem;
   line-height: 3rem;
 }
 .tokyoStudyTour_content p {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   line-height: 3rem;
+}
+.tokyoStudyTour_ul {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  padding: 2rem 0;
+}
+.tokyoStudyTour_ul li:before{
+  content: "・ "
 }
 
 .passButton{
@@ -1152,6 +1192,10 @@ height: 100%;
 .passButton:hover{
   cursor: pointer;
   background-color: rgba(255,255,255,0.3);
+}
+
+footer.single-page_footer{
+  background-color: rgba(40,40,40,0.8) !important;
 }
 
 /************************************************
@@ -1339,11 +1383,14 @@ height: 100%;
   .single-page{
     background-attachment: scroll;
   }
+  .tokyoStudyTour_content div.box{
+      width: 100%;
+  }
 
 }
 
 
-@media (max-width:414px) {
+@media (max-width:500px) {
 .br-sp{
     display: block;
 }
@@ -1443,8 +1490,30 @@ background:url('../images/tokyo_study_tour/tokyoStation2.jpg') center no-repeat;
 background-size:cover;
 }
 
+.tokyoStudyTour_title .sub-title {
+  font-size: 1.6rem;
+  padding: 0 35px;
+}
+.tokyoStudyTour_title .sub-title:before,
+.tokyoStudyTour_title .sub-title:after {
+  width: 25px;
+}
+
 .tokyoStudyTour_content h5 {
   width: 80%;
+}
+
+.tokyoStudyTour_content p {
+  font-size: 1.6rem;
+}
+
+.tokyoStudyTour_ul {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  padding: 1.5rem 0;
+}
+.passButton{
+  font-size: 1.8rem;
 }
 
 /* スクロールボタンここから */
