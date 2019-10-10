@@ -859,9 +859,11 @@ header nav li {
 .pleaseScroll {
   margin; auto;
   padding-top: 7rem;
+  margin-bottom: 40rem;
   position: relative;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.4rem;
+  color: rgba(255,255,255,0.9)
 }
 .pleaseScroll::before{
   content: "";
@@ -871,12 +873,12 @@ header nav li {
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 1px solid rgb(40,40,40);
-  border-bottom: 1px solid rgb(40,40,40);
+  border-left: 1px solid rgba(255,255,255,0.9);
+  border-bottom: 1px solid rgba(255,255,255,0.9);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  -webkit-animation: sdb 1.5s infinite;
-  animation: sdb 1.5s infinite;
+  -webkit-animation: sdb 2s infinite;
+  animation: sdb 2s infinite;
   box-sizing: border-box;
 }
 @-webkit-keyframes sdb {
