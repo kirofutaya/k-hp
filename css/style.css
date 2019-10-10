@@ -1103,13 +1103,27 @@ height: 100%;
 
 .tokyoStudyTour_title {
   width: 100%;
+  height: 358px;
   padding: 15rem 2rem 5rem 2rem;
   font-family: 'Sawarabi Mincho';
   font-size: 4rem;
   text-align: center;
   letter-spacing: 0.4rem;
   line-height: 5rem;
+  position: relative;
 }
+
+ .tokyoStudyTour_title .title {
+  display: none;
+  position: absolute;
+  top: 229px;
+  left: 50%;
+  width: 100%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
 
 .tokyoStudyTour_title .sub-title {
   font-size: 2rem;
@@ -1505,6 +1519,16 @@ width:100%;
 height:100vh;
 background:url('../images/tokyo_study_tour/tokyoStation2.jpg') center no-repeat;
 background-size:cover;
+}
+
+.tokyoStudyTour_title {
+  font-size: 3.2rem;
+  height: 356px;
+}
+
+.tokyoStudyTour_title .title{
+  font-size: 3.2rem;
+  top: 219px;
 }
 
 .tokyoStudyTour_title .sub-title {

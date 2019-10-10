@@ -4,6 +4,7 @@ $(window).on('load', function(){
   $('#loading').delay(600).fadeOut(300);
   $('#loading__wrapper').css('display', 'block');
   $('.title').delay(1400).fadeIn(2000);
+  $('.tokyo').delay(5000).fadeIn(5000);
 });
 
 $(function () {
