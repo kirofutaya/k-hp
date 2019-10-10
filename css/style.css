@@ -1381,8 +1381,24 @@ footer.single-page_footer{
   }
 
 
-  .single-page{
+  /* .single-page{
     background-attachment: scroll;
+  } */
+  .single-page {
+    background-image: none;
+    position: relative;
+  }
+  .single-page:before{
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100vh;
+  background:url('../images/tokyo_study_tour/tokyoStation2.jpg') center no-repeat;
+  background-size:cover;
   }
   .tokyoStudyTour_content div.box{
       width: 100%;
