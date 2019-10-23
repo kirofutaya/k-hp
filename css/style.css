@@ -41,7 +41,7 @@ a {
 .fadein {
  opacity: 0;
  transform : translate(0, 50px);
- transition : all 1500ms;
+ transition : all 1000ms;
 }
 
 .fadein.scrollin{
