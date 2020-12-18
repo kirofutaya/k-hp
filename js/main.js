@@ -133,12 +133,21 @@ $(function(){
       var date2 = this.date;
       date2 = date2.split('.');
       date2 = date2.join('-');
-      if (this.link.length >= 1){
-        $('<li><a class="hover-mask" href="' + this.link + '" target="_blank"><div class="flex-news"><div class="item1"><time datetime="' + date2 + '">' + this.date + '</time></div><div class="item2">' + this.content + '</div></div><div class="mask3"><div class="caption-news">READ MORE</div></div></a></li>').prependTo('ul.newsList');
+      if (this.new == "yes"){
+        if (this.link.length >= 1){
+          $('<li><a class="hover-mask" href="' + this.link + '" target="_blank"><div class="flex-news"><div class="item1"><time datetime="' + date2 + '">' + this.date + '</time></div><div class="item2"><img src="./images/new.png" style="height:22px;">' + "　" + this.content + '</div></div><div class="mask3"><div class="caption-news">READ MORE</div></div></a></li>').prependTo('ul.newsList');
+        }else{
+          $('<li><a><div class="flex-news"><div class="item1"><time datetime="' + date2 + '">' + this.date + '</time></div><div class="item2"><img src="./images/new.png" style="height:22px;">' +  " " +this.content + '</div></div></a></li>').prependTo('ul.newsList');
+        };
       }else{
-        $('<li><a><div class="flex-news"><div class="item1"><time datetime="' + date2 + '">' + this.date + '</time></div><div class="item2">' + this.content + '</div></div></a></li>').prependTo('ul.newsList');
+        if (this.link.length >= 1){
+          $('<li><a class="hover-mask" href="' + this.link + '" target="_blank"><div class="flex-news"><div class="item1"><time datetime="' + date2 + '">' + this.date + '</time></div><div class="item2">' + this.content + '</div></div><div class="mask3"><div class="caption-news">READ MORE</div></div></a></li>').prependTo('ul.newsList');
+        }else{
+          $('<li><a><div class="flex-news"><div class="item1"><time datetime="' + date2 + '">' + this.date + '</time></div><div class="item2">' + this.content + '</div></div></a></li>').prependTo('ul.newsList');
+        };
       };
     });
+
 
 
     // if (infoCount >= 1) {
